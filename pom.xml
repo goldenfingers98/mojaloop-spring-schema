@@ -5,8 +5,8 @@
 	<artifactId>schema</artifactId>
 	<version>v0.0.1</version>
 	<packaging>jar</packaging>
-	<name>scheme</name>
-	<description>Demo project for Spring Boot</description>
+	<name>schema</name>
+	<description>Mojaloop scheme adapter schema for spring.</description>
 	<properties>
 		<java.version>11</java.version>
 	</properties>
@@ -40,7 +40,7 @@
 		<repository>
 		  <id>github</id>
 		  <name>GitHub goldenfingers98 Apache Maven Packages</name>
-		  <url>https://maven.pkg.github.com/goldenfingers98/mojaloop-java-schema</url>
+		  <url>https://maven.pkg.github.com/goldenfingers98/mojaloop-spring-schema</url>
 		</repository>
 	 </distributionManagement>
 
