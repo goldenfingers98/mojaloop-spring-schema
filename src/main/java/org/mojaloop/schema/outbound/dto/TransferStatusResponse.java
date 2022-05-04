@@ -12,7 +12,7 @@ public class TransferStatusResponse {
 
     private UUID CorrelationId;
     private TransferStatus currentState;
-    private TransfersIdPutResponse fulfil;
+    private TransfersIDPutResponse fulfil;
     
     public TransferStatusResponse() {
     }
@@ -33,11 +33,11 @@ public class TransferStatusResponse {
         this.currentState = currentState;
     }
 
-    public TransfersIdPutResponse getFulfil() {
+    public TransfersIDPutResponse getFulfil() {
         return fulfil;
     }
 
-    public void setFulfil(TransfersIdPutResponse fulfil) {
+    public void setFulfil(TransfersIDPutResponse fulfil) {
         this.fulfil = fulfil;
     }
 

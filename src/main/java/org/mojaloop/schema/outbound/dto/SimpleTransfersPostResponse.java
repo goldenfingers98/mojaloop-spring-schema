@@ -8,17 +8,17 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 @JsonInclude(Include.NON_NULL)
 public class SimpleTransfersPostResponse {
     
-    private TransfersIdPutResponse transfer;
+    private TransfersIDPutResponse transfer;
     private Async2SyncCurrentState currentState;
     
     public SimpleTransfersPostResponse() {
     }
 
-    public TransfersIdPutResponse getTransfer() {
+    public TransfersIDPutResponse getTransfer() {
         return transfer;
     }
 
-    public void setTransfer(TransfersIdPutResponse transfer) {
+    public void setTransfer(TransfersIDPutResponse transfer) {
         this.transfer = transfer;
     }
 
