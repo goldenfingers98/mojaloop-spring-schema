@@ -6,7 +6,6 @@ import org.mojaloop.schema.common.dto.TransferParty;
 import org.mojaloop.schema.common.utils.Amount;
 import org.mojaloop.schema.common.utils.AmountType;
 import org.mojaloop.schema.common.utils.Currency;
-import org.mojaloop.schema.common.utils.EmbeddedIlpPacketData;
 import org.mojaloop.schema.common.utils.ExtensionItem;
 import org.mojaloop.schema.common.utils.Note;
 import org.mojaloop.schema.common.utils.TransactionType;
@@ -17,14 +16,13 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 @JsonInclude(Include.NON_NULL)
 public class TransferRequest {
 
-    private UUID transferId;
+    private UUID homeTransactionId;
     private TransferParty from;
     private TransferParty to;
     private AmountType amountType;
     private Currency currency;
     private Amount amount;
     private TransactionType transactionType;
-    private EmbeddedIlpPacketData ilpPacket;
     private Note note;
     private List<ExtensionItem> quoteRequestExtensions;
     private List<ExtensionItem> transferRequestExtensions;
@@ -32,12 +30,12 @@ public class TransferRequest {
     public TransferRequest() {
     }
 
-    public UUID getTransferId() {
-        return transferId;
+    public UUID getHomeTransactionId() {
+        return homeTransactionId;
     }
 
-    public void setTransferId(UUID transferId) {
-        this.transferId = transferId;
+    public void setHomeTransactionId(UUID homeTransactionId) {
+        this.homeTransactionId = homeTransactionId;
     }
 
     public TransferParty getFrom() {
@@ -86,14 +84,6 @@ public class TransferRequest {
 
     public void setTransactionType(TransactionType transactionType) {
         this.transactionType = transactionType;
-    }
-
-    public EmbeddedIlpPacketData getIlpPacket() {
-        return ilpPacket;
-    }
-
-    public void setIlpPacket(EmbeddedIlpPacketData ilpPacket) {
-        this.ilpPacket = ilpPacket;
     }
 
     public Note getNote() {
