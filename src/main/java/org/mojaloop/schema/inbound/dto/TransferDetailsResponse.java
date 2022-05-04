@@ -2,7 +2,6 @@ package org.mojaloop.schema.inbound.dto;
 
 import java.util.Date;
 import java.util.List;
-import java.util.UUID;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
@@ -21,7 +20,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 @JsonInclude(Include.NON_NULL)
 public class TransferDetailsResponse {
     
-    private UUID homeTransactionId;
+    private String homeTransactionId;
     private TransferParty from;
     private TransferParty to;
     private AmountType amountType;
@@ -35,13 +34,13 @@ public class TransferDetailsResponse {
     private List<ExtensionItem> extensions;
 
     public TransferDetailsResponse() {
-    }
+    }    
 
-    public UUID getHomeTransactionId() {
+    public String getHomeTransactionId() {
         return homeTransactionId;
     }
 
-    public void setHomeTransactionId(UUID homeTransactionId) {
+    public void setHomeTransactionId(String homeTransactionId) {
         this.homeTransactionId = homeTransactionId;
     }
 

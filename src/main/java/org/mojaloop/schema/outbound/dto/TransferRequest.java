@@ -1,6 +1,5 @@
 package org.mojaloop.schema.outbound.dto;
 import java.util.List;
-import java.util.UUID;
 
 import org.mojaloop.schema.common.dto.TransferParty;
 import org.mojaloop.schema.common.utils.Amount;
@@ -16,7 +15,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 @JsonInclude(Include.NON_NULL)
 public class TransferRequest {
 
-    private UUID homeTransactionId;
+    private String homeTransactionId;
     private TransferParty from;
     private TransferParty to;
     private AmountType amountType;
@@ -30,11 +29,11 @@ public class TransferRequest {
     public TransferRequest() {
     }
 
-    public UUID getHomeTransactionId() {
+    public String getHomeTransactionId() {
         return homeTransactionId;
     }
 
-    public void setHomeTransactionId(UUID homeTransactionId) {
+    public void setHomeTransactionId(String homeTransactionId) {
         this.homeTransactionId = homeTransactionId;
     }
 

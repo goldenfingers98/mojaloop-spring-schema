@@ -12,7 +12,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 @JsonInclude(Include.NON_NULL)
 public class BulkQuoteRequest {
     
-    private UUID homeTransactionId;
+    private String homeTransactionId;
     private UUID bulkQuoteId;
     private TransferParty from;
     private List<IndividualQuote> individualQuotes;
@@ -21,13 +21,14 @@ public class BulkQuoteRequest {
     public BulkQuoteRequest() {
     }
 
-    public UUID getHomeTransactionId() {
+    public String getHomeTransactionId() {
         return homeTransactionId;
     }
 
-    public void setHomeTransactionId(UUID homeTransactionId) {
+    public void setHomeTransactionId(String homeTransactionId) {
         this.homeTransactionId = homeTransactionId;
     }
+
 
     public UUID getBulkQuoteId() {
         return bulkQuoteId;
