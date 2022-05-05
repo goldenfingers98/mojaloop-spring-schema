@@ -11,6 +11,10 @@ public class FspId {
     public FspId() {
     }
 
+    public FspId(String value) {
+        this.value = value;
+    }
+
     public String getValue() {
         return value;
     }
