@@ -1,18 +1,21 @@
 package org.mojaloop.schema.common.utils;
 
 import java.io.Serializable;
-import java.lang.reflect.Type;
 
 
 import com.fasterxml.jackson.annotation.JsonValue;
 
 import org.mojaloop.schema.common.utils.exception.MojaloopSchemaException;
 
-public class Note implements Serializable, Type{
+public class Note implements Serializable{
     @JsonValue
     private String value;
 
     public Note() {
+    }
+
+    public Note(String value) {
+        this.value = value;
     }
 
     public String getValue() {

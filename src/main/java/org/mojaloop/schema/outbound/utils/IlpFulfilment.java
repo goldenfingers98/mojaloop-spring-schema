@@ -21,6 +21,10 @@ public class IlpFulfilment {
         return data;
     }
 
+    public IlpFulfilment(String data) {
+        this.data = data;
+    }
+
     public void setData(String data) {
         if(!data.matches(PATTERN)){
             throw new MojaloopSchemaException("IlpFulfilment does not match pattern");

@@ -14,6 +14,10 @@ public class Condition {
     public Condition() {
     }
 
+    public Condition(String data) {
+        this.data = data;
+    }
+
     public String getData() {
         return data;
     }

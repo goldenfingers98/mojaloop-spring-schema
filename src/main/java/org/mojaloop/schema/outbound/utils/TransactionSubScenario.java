@@ -17,6 +17,10 @@ public class TransactionSubScenario {
         return data;
     }
 
+    public TransactionSubScenario(String data) {
+        this.data = data;
+    }
+
     public void setData(String data) {
         if(!data.matches(PATTERN)){
             throw new MojaloopSchemaException("TransactionSubScenario does not match pattern");

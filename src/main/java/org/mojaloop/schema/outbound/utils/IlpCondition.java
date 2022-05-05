@@ -15,6 +15,10 @@ public class IlpCondition {
         return data;
     }
 
+    public IlpCondition(String data) {
+        this.data = data;
+    }
+
     public void setData(String data) {
         if(!data.matches(PATTERN)){
             throw new MojaloopSchemaException("IlpCondition does not match pattern");

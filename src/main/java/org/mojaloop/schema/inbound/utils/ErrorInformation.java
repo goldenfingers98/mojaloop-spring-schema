@@ -1,14 +1,12 @@
 package org.mojaloop.schema.inbound.utils;
 
-import java.util.List;
-
-import org.mojaloop.schema.common.utils.ExtensionItem;
+import org.mojaloop.schema.outbound.utils.ExtensionList;
 
 public class ErrorInformation {
 
     private ErrorCode errorCode;
     private ErrorDescription errorDescription;
-    private List<ExtensionItem> extensionList;
+    private ExtensionList extensionList;
     
     public ErrorInformation() {
     }
@@ -29,13 +27,14 @@ public class ErrorInformation {
         this.errorDescription = errorDescription;
     }
 
-    public List<ExtensionItem> getExtensionList() {
+    public ExtensionList getExtensionList() {
         return extensionList;
     }
 
-    public void setExtensionList(List<ExtensionItem> extensionList) {
+    public void setExtensionList(ExtensionList extensionList) {
         this.extensionList = extensionList;
     }
+
 
     
 }

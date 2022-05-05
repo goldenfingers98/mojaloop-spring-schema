@@ -12,6 +12,10 @@ public class ErrorDescription {
     public ErrorDescription() {
     }
 
+    public ErrorDescription(String value) {
+        this.value = value;
+    }
+
     public String getValue() {
         return value;
     }
