@@ -1,7 +1,7 @@
 package org.mojaloop.schema.outbound.utils;
 
 import org.mojaloop.schema.common.utils.ErrorResponse;
-import org.mojaloop.schema.inbound.dto.TransferResponse;
+import org.mojaloop.schema.outbound.dto.TransferResponse;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
