@@ -21,7 +21,8 @@ public class InboundTransferResponseTest {
         "    },"+
         "    \"to\": {"+
         "      \"idType\": \"MSISDN\","+
-        "      \"idValue\": \"21629775651\""+
+        "      \"idValue\": \"21629775651\","+
+        "      \"fspId\": \"patati\""+
         "    },"+
         "    \"amountType\": \"SEND\","+
         "    \"currency\": \"USD\","+
