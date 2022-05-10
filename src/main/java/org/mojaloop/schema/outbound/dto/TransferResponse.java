@@ -1,7 +1,9 @@
 package org.mojaloop.schema.outbound.dto;
 
+import java.util.Date;
 import java.util.UUID;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 
@@ -30,6 +32,8 @@ public class TransferResponse {
     private QuotesIDPutResponse quoteResponse;
     private String quoteResponseSource;
     private TransfersIDPutResponse fulfil;
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss.SSSXXX")
+    private Date initiatedTimestamp;
     private TransferError lastError;
     
     public TransferResponse() {
@@ -149,6 +153,14 @@ public class TransferResponse {
 
     public TransferError getLastError() {
         return lastError;
+    }
+
+    public Date getInitiatedTimestamp() {
+        return initiatedTimestamp;
+    }
+
+    public void setInitiatedTimestamp(Date initiatedTimestamp) {
+        this.initiatedTimestamp = initiatedTimestamp;
     }
 
     public void setLastError(TransferError lastError) {
