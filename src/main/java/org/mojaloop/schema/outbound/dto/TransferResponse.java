@@ -1,6 +1,7 @@
 package org.mojaloop.schema.outbound.dto;
 
 import java.util.Date;
+import java.util.List;
 import java.util.UUID;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
@@ -11,6 +12,7 @@ import org.mojaloop.schema.common.dto.TransferParty;
 import org.mojaloop.schema.common.utils.Amount;
 import org.mojaloop.schema.common.utils.AmountType;
 import org.mojaloop.schema.common.utils.Currency;
+import org.mojaloop.schema.common.utils.ExtensionItem;
 import org.mojaloop.schema.common.utils.Note;
 import org.mojaloop.schema.common.utils.TransferError;
 import org.mojaloop.schema.common.utils.TransferStatus;;
@@ -27,6 +29,7 @@ public class TransferResponse {
     private Amount amount;
     private String transactionType;
     private Note note;
+    private List<ExtensionItem> transferRequestExtensions;
     private TransferStatus currentState;
     private UUID quoteId;
     private QuotesIDPutResponse quoteResponse;
@@ -111,6 +114,14 @@ public class TransferResponse {
         this.note = note;
     }
 
+    public List<ExtensionItem> getTransferRequestExtensions() {
+        return transferRequestExtensions;
+    }
+
+    public void setTransferRequestExtensions(List<ExtensionItem> transferRequestExtensions) {
+        this.transferRequestExtensions = transferRequestExtensions;
+    }
+
     public TransferStatus getCurrentState() {
         return currentState;
     }
@@ -151,10 +162,6 @@ public class TransferResponse {
         this.fulfil = fulfil;
     }
 
-    public TransferError getLastError() {
-        return lastError;
-    }
-
     public Date getInitiatedTimestamp() {
         return initiatedTimestamp;
     }
@@ -163,10 +170,12 @@ public class TransferResponse {
         this.initiatedTimestamp = initiatedTimestamp;
     }
 
-    public void setLastError(TransferError lastError) {
-        this.lastError = lastError;
+    public TransferError getLastError() {
+        return lastError;
     }
 
-    
+    public void setLastError(TransferError lastError) {
+        this.lastError = lastError;
+    }  
     
 }
