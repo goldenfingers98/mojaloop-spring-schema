@@ -2,15 +2,14 @@ package org.mojaloop.schema.inbound.utils;
 
 import java.util.UUID;
 
-import org.mojaloop.schema.common.dto.TransferParty;
 import org.mojaloop.schema.common.utils.Money;
 
 public class IlpPacketData {
     
     private UUID quoteId;
     private UUID transactionId;
-    private TransferParty payer;
-    private TransferParty peyee;
+    private PartyInfo payer;
+    private PartyInfo payee;
     private Money amount;
     private TransactionTypeDto transactionType;
 
@@ -33,20 +32,20 @@ public class IlpPacketData {
         this.transactionId = transactionId;
     }
 
-    public TransferParty getPayer() {
+    public PartyInfo getPayer() {
         return payer;
     }
 
-    public void setPayer(TransferParty payer) {
+    public void setPayer(PartyInfo payer) {
         this.payer = payer;
     }
 
-    public TransferParty getPeyee() {
-        return peyee;
+    public PartyInfo getPayee() {
+        return payee;
     }
 
-    public void setPeyee(TransferParty peyee) {
-        this.peyee = peyee;
+    public void setPayee(PartyInfo payee) {
+        this.payee = payee;
     }
 
     public Money getAmount() {

@@ -3,7 +3,6 @@ package org.mojaloop.schema.inbound.dto;
 import java.util.Date;
 import java.util.UUID;
 
-import javax.management.Notification;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
@@ -11,6 +10,7 @@ import org.mojaloop.schema.common.utils.MojaloopError;
 import org.mojaloop.schema.common.utils.TransferStatus;
 import org.mojaloop.schema.inbound.utils.Direction;
 import org.mojaloop.schema.inbound.utils.MojaloopRequest;
+import org.mojaloop.schema.inbound.utils.Notification;
 import org.mojaloop.schema.inbound.utils.QuoteIDPatchResponse;
 
 import com.fasterxml.jackson.annotation.JsonInclude;

@@ -1,6 +1,6 @@
 package org.mojaloop.schema.inbound.dto;
 
-import java.util.List;
+import java.util.Map;
 import java.util.UUID;
 
 import org.mojaloop.schema.common.dto.TransferParty;
@@ -20,7 +20,7 @@ public class TransferRequest {
 
     private UUID transferId;
     private QuoteResponse quote;
-    private List<ExtensionItem> quoteRequestExtensions;
+    private Map<Integer, ExtensionItem> quoteRequestExtensions;
     private TransferParty from;
     private TransferParty to;
     private AmountType amountType;
@@ -49,11 +49,11 @@ public class TransferRequest {
         this.quote = quote;
     }
 
-    public List<ExtensionItem> getQuoteRequestExtensions() {
+    public Map<Integer, ExtensionItem> getQuoteRequestExtensions() {
         return quoteRequestExtensions;
     }
 
-    public void setQuoteRequestExtensions(List<ExtensionItem> quoteRequestExtensions) {
+    public void setQuoteRequestExtensions(Map<Integer, ExtensionItem> quoteRequestExtensions) {
         this.quoteRequestExtensions = quoteRequestExtensions;
     }
 

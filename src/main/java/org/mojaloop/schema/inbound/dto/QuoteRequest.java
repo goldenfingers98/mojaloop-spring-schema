@@ -1,7 +1,6 @@
 package org.mojaloop.schema.inbound.dto;
 
 import java.util.Date;
-import java.util.List;
 import java.util.UUID;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
@@ -10,12 +9,12 @@ import org.mojaloop.schema.common.dto.TransferParty;
 import org.mojaloop.schema.common.utils.Amount;
 import org.mojaloop.schema.common.utils.AmountType;
 import org.mojaloop.schema.common.utils.Currency;
-import org.mojaloop.schema.common.utils.ExtensionItem;
 import org.mojaloop.schema.common.utils.GeoCode;
 import org.mojaloop.schema.common.utils.Initiator;
 import org.mojaloop.schema.common.utils.InitiatorType;
 import org.mojaloop.schema.common.utils.Note;
 import org.mojaloop.schema.common.utils.TransactionType;
+import org.mojaloop.schema.outbound.utils.ExtensionList;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
@@ -39,7 +38,7 @@ public class QuoteRequest {
     private Note note;
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss.SSSXXX")
     private Date expiration;
-    private List<ExtensionItem> extensionList;
+    private ExtensionList extensionList;
 
     public QuoteRequest() {
     }
@@ -164,11 +163,12 @@ public class QuoteRequest {
         this.expiration = expiration;
     }
 
-    public List<ExtensionItem> getExtensionList() {
+    public ExtensionList getExtensionList() {
         return extensionList;
     }
 
-    public void setExtensionList(List<ExtensionItem> extensionList) {
+    public void setExtensionList(ExtensionList extensionList) {
         this.extensionList = extensionList;
     }
+
 }

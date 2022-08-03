@@ -30,6 +30,7 @@ public class TransferResponse {
     private String transactionType;
     private Note note;
     private List<ExtensionItem> transferRequestExtensions;
+    private List<ExtensionItem> quoteRequestExtensions;
     private TransferStatus currentState;
     private UUID quoteId;
     private QuotesIDPutResponse quoteResponse;
@@ -120,6 +121,14 @@ public class TransferResponse {
 
     public void setTransferRequestExtensions(List<ExtensionItem> transferRequestExtensions) {
         this.transferRequestExtensions = transferRequestExtensions;
+    }
+
+    public List<ExtensionItem> getQuoteRequestExtensions() {
+        return quoteRequestExtensions;
+    }
+
+    public void setQuoteRequestExtensions(List<ExtensionItem> quoteRequestExtensions) {
+        this.quoteRequestExtensions = quoteRequestExtensions;
     }
 
     public TransferStatus getCurrentState() {
